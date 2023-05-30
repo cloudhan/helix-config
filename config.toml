@@ -1,0 +1,18 @@
+theme = "OneLight"
+
+[editor]
+line-number = "relative"
+mouse = true
+cursorline = true
+true-color = true
+text-width = 120
+rulers = [80, 120]
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[keys.normal]
+"A-j" = [ "extend_to_line_bounds", "delete_selection", "paste_after" ]  # move the line under cursor down
+"A-k" = [ "extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before" ] # move the line under curosr up

@@ -1,0 +1,35 @@
+# https://github.com/helix-editor/helix/wiki/How-to-install-the-default-language-servers
+
+[[language]]
+name = "cpp"
+roots = ["compile_commands.json"]
+formatter = { command = "clang-format", args = ["""--style={
+                BasedOnStyle: google,
+                TabWidth: 2,
+                IndentWidth: 2,
+                AccessModifierOffset: -2,
+                ColumnLimit: 0,
+                PointerAlignment: Left,
+                FixNamespaceComments: true,
+                ShortNamespaceLines: 0,
+                SortIncludes: Never,
+                AlwaysBreakTemplateDeclarations: Yes,
+                AllowShortEnumsOnASingleLine: false,
+                AllowShortFunctionsOnASingleLine: Empty,
+                AllowShortIfStatementsOnASingleLine: Never,
+                BreakConstructorInitializers: BeforeComma,
+                AlignEscapedNewlines: Right,
+                AlignAfterOpenBracket: BlockIndent,
+                InsertBraces: true}"""] }
+auto-format = false
+
+[[language]]
+name = "python"
+roots = ["pyproject.toml"]
+formatter = { command = "yapf", args = ["""--style={
+                based_on_style: yapf,
+                column_limit: 119,
+                split_before_logical_operator: true}"""] }
+language-server = { command = "pyright-langserver", args = ["--stdio"] }
+config = {}  # <- this is the important line
+auto-format = false
