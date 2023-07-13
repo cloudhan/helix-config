@@ -16,3 +16,15 @@ select = "underline"
 [keys.normal]
 "A-j" = [ "extend_to_line_bounds", "delete_selection", "paste_after" ]  # move the line under cursor down
 "A-k" = [ "extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before" ] # move the line under curosr up
+
+[keys.insert]
+"A-j" = [ "extend_to_line_bounds", "delete_selection", "paste_after" ]  # move the line under cursor down
+"A-k" = [ "extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before" ] # move the line under curosr up
+"C-p" = "move_line_up"
+"C-n" = "move_line_down"
+"C-b" = "move_char_left"
+"C-f" = "move_char_right"
+"A-v" = "page_up"
+"C-v" = "page_down"
+"C-a" = "goto_line_start"
+"C-e" = "goto_line_end_newline"
