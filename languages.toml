@@ -28,7 +28,7 @@ auto-format = false
 
 [[language]]
 name = "python"
-language-servers = [ "ruff" ]
+language-servers = [ "pyright", "ruff" ]
 roots = ["pyproject.toml"]
 
 [language-server.ruff]
